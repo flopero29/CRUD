@@ -7,7 +7,13 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
 # 🧪 Laboratorio #2: CRUD Rápido con Laravel y Vite
+
+**Autor:** José Bustamante 8-1011-1717                   
+**Correo** jose.bustamante2@utp.ac.pa                      
+**Fecha:** 5 de octubre de 20205            
+**Curso:** Ingenieria Web 
 
 ## 📝 Descripción del Proyecto
 Este repositorio contiene la implementación de un **CRUD** (Crear, Leer, Actualizar, Eliminar) básico para la gestión de **Productos**.  
@@ -79,10 +85,14 @@ Abre tu navegador y ve a:
 http://127.0.0.1:8000/products
 ```
 
+Capturas de éxito en carpeta resources\captures
+
 ### 🐛 Errores Frecuentes y Soluciones Aplicadas
-Error Encontrado	Causa Principal	Solución
-'vite' is not recognized...	Las dependencias de Node no estaban instaladas o el sistema no encontraba el ejecutable de Vite.	Ejecutar npm install para asegurar que Vite esté disponible en node_modules.
-No application encryption key has been specified.	El archivo .env existía, pero faltaba la clave de seguridad para la encriptación.	Se generó la clave automáticamente con: php artisan key:generate.
-View [layouts.app] not found.	Las vistas del CRUD (ej. products/index.blade.php) intentaban usar una plantilla maestra (layouts.app) que no estaba creada.	Se creó manualmente resources/views/layouts/app.blade.php como plantilla principal.
-Página Sin Estilos (CSS)	La aplicación se veía como texto plano porque no se cargaba el CSS de Bootstrap.	Se aseguró la instalación de laravel/ui y que el servidor de Vite (npm run dev) estuviera activo para compilar app.scss a CSS.
-Server Error (Error 500)	Fallo de conexión inicial a la base de datos o migraciones pendientes.	Se creó la base de datos en phpMyAdmin y se ejecutó php artisan migrate.
+| Error Encontrado                     | Causa Principal                                                                 | Solución                                                                                   |
+|-------------------------------------|-------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| 'vite' is not recognized...          | Las dependencias de Node no estaban instaladas o el sistema no encontraba el ejecutable de Vite. | Ejecutar `npm install` para asegurar que Vite esté disponible en `node_modules`.          |
+| No application encryption key has been specified. | El archivo `.env` existía, pero faltaba la clave de seguridad para la encriptación. | Se generó la clave automáticamente con: `php artisan key:generate`.                      |
+| View [layouts.app] not found.        | Las vistas del CRUD (ej. `products/index.blade.php`) intentaban usar una plantilla maestra (`layouts.app`) que no estaba creada. | Se creó manualmente `resources/views/layouts/app.blade.php` como plantilla principal.     |
+| Página Sin Estilos (CSS)             | La aplicación se veía como texto plano porque no se cargaba el CSS de Bootstrap. | Se aseguró la instalación de `laravel/ui` y que el servidor de Vite (`npm run dev`) estuviera activo para compilar `app.scss` a CSS. |
+| Server Error (Error 500)             | Fallo de conexión inicial a la base de datos o migraciones pendientes.        | Se creó la base de datos en phpMyAdmin y se ejecutó `php artisan migrate`.                |
+
